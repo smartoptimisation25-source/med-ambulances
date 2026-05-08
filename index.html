@@ -380,19 +380,21 @@
     </div>
   </section>
 
-  <!-- ===================== ZONE GÉOGRAPHIQUE ===================== -->
+  <!-- ===================== ZONE & TRAJET ===================== -->
   <section id="zone" class="py-20 px-4 bg-white" aria-labelledby="zone-title">
     <div class="max-w-5xl mx-auto">
 
-      <div class="text-center mb-14">
+      <div class="text-center mb-12">
         <h2 id="zone-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-3">
-          Notre zone d'intervention
+          Vous habitez dans le 68&nbsp;?<br class="hidden sm:block"/>
+          <span class="text-red-med">On vous emmène à Strasbourg.</span>
         </h2>
-        <p class="text-gray-500 text-lg max-w-lg mx-auto">
-          Basés à Pulversheim, nous intervenons dans tout le Haut-Rhin.
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">
+          De votre domicile dans le Haut-Rhin jusqu'à l'hôpital ou au cabinet du spécialiste — aller et retour, pris en charge par la Sécurité Sociale.
         </p>
       </div>
 
+      <!-- Deux colonnes : villes → hôpitaux -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
 
         <!-- Colonne DÉPART -->
@@ -404,7 +406,7 @@
               </svg>
             </div>
             <div>
-              <p class="text-xs font-semibold text-blue-med/60 uppercase tracking-widest">Vous habitez</p>
+              <p class="text-xs font-semibold text-blue-med/60 uppercase tracking-widest">Vous partez de</p>
               <p class="font-black text-blue-med text-lg">Haut-Rhin (68)</p>
             </div>
           </div>
@@ -433,7 +435,7 @@
               </svg>
             </div>
             <div>
-              <p class="text-xs font-semibold text-red-med/60 uppercase tracking-widest">Nous vous emmenons</p>
+              <p class="text-xs font-semibold text-red-med/60 uppercase tracking-widest">Nous vous emmenons à</p>
               <p class="font-black text-red-med text-lg">Strasbourg &amp; alentours</p>
             </div>
           </div>
@@ -475,51 +477,9 @@
 
       </div>
 
-    </div>
-  </section>
-
-  <!-- ===================== NAVETTE 68 → STRASBOURG ===================== -->
-  <section id="navette" class="py-20 px-4 bg-white" aria-labelledby="navette-title">
-    <div class="max-w-4xl mx-auto text-center">
-
-      <span class="inline-block bg-blue-pale text-blue-med font-semibold text-sm px-4 py-1.5 rounded-full mb-5">Spécialité longue distance</span>
-
-      <h2 id="navette-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-4">
-        Vous habitez dans le 68&nbsp;?<br/>
-        Votre spécialiste est à Strasbourg&nbsp;?
-      </h2>
-
-      <p class="text-gray-500 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
-        Nous assurons la navette entre le Haut-Rhin et Strasbourg — de votre domicile jusqu'à l'hôpital ou au cabinet du spécialiste, aller et retour.
-      </p>
-
-      <!-- Trajet simplifié -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
-        <div class="bg-blue-pale border border-blue-100 rounded-2xl px-7 py-5 text-center">
-          <p class="text-blue-med/60 text-xs font-semibold uppercase tracking-widest mb-1">Départ</p>
-          <p class="text-blue-med font-black text-xl mb-1">Haut-Rhin (68)</p>
-          <p class="text-gray-400 text-sm">Mulhouse · Colmar · Guebwiller<br/>Thann · Ribeauvillé · Ensisheim…</p>
-        </div>
-
-        <div class="flex sm:flex-col items-center gap-1 px-2 text-gray-300">
-          <!-- Flèche bas sur mobile, droite sur desktop -->
-          <svg class="w-5 h-5 sm:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-          <svg class="w-5 h-5 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          <span class="text-xs text-gray-400">aller-retour</span>
-          <svg class="w-5 h-5 sm:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 15l7-7 7 7"/></svg>
-          <svg class="w-5 h-5 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
-        </div>
-
-        <div class="bg-red-med/8 border border-red-med/20 rounded-2xl px-7 py-5 text-center" style="background:rgba(204,28,28,0.05)">
-          <p class="text-red-med/70 text-xs font-semibold uppercase tracking-widest mb-1">Arrivée</p>
-          <p class="text-red-med font-black text-xl mb-1">Strasbourg (67)</p>
-          <p class="text-gray-400 text-sm">CHU Hautepierre · NHC · Clinique Rhena<br/>Sainte-Anne · Spécialistes…</p>
-        </div>
-      </div>
-
-      <!-- 3 points en ligne légère -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
-        <div class="flex gap-3 items-start">
+      <!-- 3 garanties -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class="flex gap-3 items-start bg-gray-light rounded-2xl p-5">
           <div class="w-9 h-9 rounded-xl bg-blue-pale flex items-center justify-center flex-shrink-0 mt-0.5">
             <svg class="w-4 h-4 text-blue-med" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
           </div>
@@ -528,22 +488,22 @@
             <p class="text-gray-500 text-sm leading-relaxed">Nous calculons l'heure de départ pour que vous arriviez sereinement.</p>
           </div>
         </div>
-        <div class="flex gap-3 items-start">
+        <div class="flex gap-3 items-start bg-gray-light rounded-2xl p-5">
           <div class="w-9 h-9 rounded-xl bg-blue-pale flex items-center justify-center flex-shrink-0 mt-0.5">
             <svg class="w-4 h-4 text-blue-med" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           </div>
           <div>
-            <p class="font-bold text-gray-800 mb-0.5">Attente sur place</p>
+            <p class="font-bold text-gray-800 mb-0.5">Nous attendons sur place</p>
             <p class="text-gray-500 text-sm leading-relaxed">Si la consultation dure plus longtemps, nous attendons. Vous n'êtes jamais seul.</p>
           </div>
         </div>
-        <div class="flex gap-3 items-start">
+        <div class="flex gap-3 items-start bg-gray-light rounded-2xl p-5">
           <div class="w-9 h-9 rounded-xl bg-blue-pale flex items-center justify-center flex-shrink-0 mt-0.5">
             <svg class="w-4 h-4 text-blue-med" fill="currentColor" viewBox="0 0 24 24"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
           </div>
           <div>
-            <p class="font-bold text-gray-800 mb-0.5">Remboursement Sécu</p>
-            <p class="text-gray-500 text-sm leading-relaxed">Avec prescription médicale, le trajet 68→67 est pris en charge. Nous gérons les formalités.</p>
+            <p class="font-bold text-gray-800 mb-0.5">Remboursé Sécurité Sociale</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Sur prescription médicale, le trajet est pris en charge. Nous gérons les formalités.</p>
           </div>
         </div>
       </div>
