@@ -426,9 +426,10 @@
           </div>
         </div>
 
-        <!-- Colonne ARRIVÉE -->
-        <div class="rounded-2xl p-7 border border-red-med/20" style="background:rgba(204,28,28,0.04)">
-          <div class="flex items-center gap-3 mb-5">
+        <!-- Colonne ARRIVÉE — galerie hôpitaux -->
+        <div class="flex flex-col gap-3">
+
+          <div class="flex items-center gap-3 px-1 mb-1">
             <div class="w-10 h-10 rounded-xl bg-red-med flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
@@ -439,40 +440,46 @@
               <p class="font-black text-red-med text-lg">Strasbourg &amp; alentours</p>
             </div>
           </div>
-          <div class="space-y-2.5">
-            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
-              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
+
+          <!-- Hautepierre — grande carte -->
+          <div class="hopital-img rounded-2xl overflow-hidden h-44 relative group">
+            <img src="assets/hautepierre.jpg" alt="CHU Hautepierre Strasbourg" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-4">
               <div>
-                <p class="font-semibold text-gray-800 text-sm leading-tight">CHU Hautepierre</p>
-                <p class="text-gray-400 text-xs leading-tight">Oncologie · Neurologie · Chirurgie</p>
+                <p class="text-white font-bold text-sm leading-tight">CHU Hautepierre</p>
+                <p class="text-white/70 text-xs">Oncologie · Neurologie · Chirurgie</p>
               </div>
-            </div>
-            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
-              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
-              <div>
-                <p class="font-semibold text-gray-800 text-sm leading-tight">Nouvel Hôpital Civil (NHC)</p>
-                <p class="text-gray-400 text-xs leading-tight">Cardiologie · Médecine interne</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
-              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
-              <div>
-                <p class="font-semibold text-gray-800 text-sm leading-tight">Clinique Rhena</p>
-                <p class="text-gray-400 text-xs leading-tight">Rhumatologie · Rééducation</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
-              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
-              <div>
-                <p class="font-semibold text-gray-800 text-sm leading-tight">Clinique Sainte-Anne</p>
-                <p class="text-gray-400 text-xs leading-tight">Ophtalmologie · Chirurgie ambulatoire</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
-              <div class="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0"></div>
-              <p class="font-semibold text-gray-600 text-sm">Spécialistes · Cabinets médicaux · et plus</p>
             </div>
           </div>
+
+          <!-- NHC + Rhena — deux petites cartes côte à côte -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="hopital-img rounded-2xl overflow-hidden h-36 relative group">
+              <img src="assets/nhc.webp" alt="Nouvel Hôpital Civil Strasbourg" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-3">
+                <div>
+                  <p class="text-white font-bold text-xs leading-tight">NHC</p>
+                  <p class="text-white/70 text-xs">Cardiologie · Médecine</p>
+                </div>
+              </div>
+            </div>
+            <div class="hopital-img rounded-2xl overflow-hidden h-36 relative group">
+              <img src="assets/rhena.jpg" alt="Clinique Rhena Strasbourg" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-3">
+                <div>
+                  <p class="text-white font-bold text-xs leading-tight">Clinique Rhena</p>
+                  <p class="text-white/70 text-xs">Rhumatologie · Rééducation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Et plus -->
+          <div class="flex items-center gap-2.5 bg-gray-light rounded-xl px-4 py-2.5">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0"></div>
+            <p class="font-semibold text-gray-600 text-sm">Clinique Sainte-Anne · Spécialistes · Cabinets médicaux · et plus</p>
+          </div>
+
         </div>
 
       </div>
