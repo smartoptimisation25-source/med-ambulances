@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Primary -->
+  <title>Med Ambulances — Transport Médical Haut-Rhin (68) | Mulhouse, Colmar, Strasbourg</title>
+  <meta name="description" content="Vous avez un rendez-vous médical et vous ne savez pas comment vous y rendre ? Med Ambulances prend en charge votre transport vers l'hôpital dans le Haut-Rhin (68). Appelez-nous : 03.89.50.60.69" />
+  <meta name="keywords" content="transport médical Mulhouse, transport hôpital Strasbourg depuis 68, VSL Colmar, ambulance Pulversheim, transport patient Haut-Rhin, comment aller à l'hôpital sans voiture, transport médical remboursé 68" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.medambulances.fr/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.medambulances.fr/" />
+  <meta property="og:title" content="Med Ambulances — Transport Médical Haut-Rhin (68)" />
+  <meta property="og:description" content="Un interlocuteur humain, à l'écoute, pour vous accompagner de chez vous jusqu'à l'hôpital. Mulhouse, Colmar, Strasbourg. Appelez le 03.89.50.60.69" />
+  <meta property="og:image" content="https://www.medambulances.fr/assets/og-image.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Med Ambulances" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Med Ambulances — Transport Médical Haut-Rhin" />
+  <meta name="twitter:description" content="Transport médical vers l'hôpital dans le Haut-Rhin. 03.89.50.60.69" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Med Ambulances",
+    "image": "https://www.medambulances.fr/assets/logo.png",
+    "telephone": "+33389506069",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue de Guebwiller",
+      "addressLocality": "Pulversheim",
+      "postalCode": "68840",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.846,
+      "longitude": 7.328
+    },
+    "areaServed": [
+      "Pulversheim", "Mulhouse", "Colmar", "Strasbourg", "Haut-Rhin"
+    ],
+    "priceRange": "Remboursé Sécurité Sociale",
+    "openingHours": "Mo-Su 00:00-24:00",
+    "url": "https://www.medambulances.fr"
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'blue-med': '#1B3B6F',
+            'blue-light': '#2D6FBF',
+            'blue-pale': '#EBF2FF',
+            'red-med': '#CC1C1C',
+            'orange-urgence': '#1B3B6F',
+            'gray-light': '#F5F7FA',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-sans bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ===================== STICKY HEADER ===================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
+    <div class="header-inner max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3" aria-label="Med Ambulances — Retour à l'accueil">
+        <img
+          src="assets/logo.png"
+          alt="Logo Med Ambulances"
+          class="h-12 w-auto object-contain"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <!-- Fallback SVG logo -->
+        <div class="logo-fallback hidden items-center gap-1" aria-hidden="true">
+          <span class="text-blue-med font-black text-2xl tracking-tight">MED</span>
+          <span class="text-red-med font-black text-2xl tracking-tight italic">AMBULANCES</span>
+        </div>
+      </a>
+
+      <!-- Header CTA -->
+      <a
+        href="tel:0389506069"
+        class="header-cta flex items-center gap-2 bg-red-med hover:bg-red-700 text-white font-bold rounded-full px-5 py-2.5 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+        aria-label="Appeler Med Ambulances au 03 89 50 60 69"
+      >
+        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        <span class="hidden sm:inline text-sm">03.89.50.60.69</span>
+        <span class="sm:hidden text-sm">Appeler</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="hero" class="hero-section min-h-screen flex items-center justify-center pt-20 pb-12 px-4" aria-labelledby="hero-title">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+
+      <!-- Urgency badge -->
+      <div class="badge-disponible inline-flex items-center gap-2 bg-orange-urgence text-white text-sm font-semibold rounded-full px-4 py-1.5 mb-6" role="note">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-hidden="true"></span>
+        Disponible 7j/7 — 24h/24
+      </div>
+
+      <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4 text-blue-med">
+        Votre transport médical<br />
+        <span class="text-orange-urgence">en toute sérénité</span>
+      </h1>
+
+      <p class="text-xl sm:text-2xl font-medium text-gray-600 mb-4 max-w-2xl mx-auto leading-relaxed">
+        Vous avez un rendez-vous médical et vous ne savez pas comment vous y rendre&nbsp;?
+      </p>
+      <p class="text-2xl sm:text-3xl font-bold text-blue-med mb-10">
+        On s'occupe de tout.
+      </p>
+
+      <!-- Primary CTA — Click-to-Call -->
+      <div class="flex flex-col gap-3 justify-center items-center">
+        <a
+          href="tel:0389506069"
+          class="cta-primary group flex items-center gap-3 bg-red-med hover:bg-red-700 text-white font-black text-xl sm:text-2xl rounded-2xl px-8 py-5 shadow-2xl hover:shadow-red-500/40 transition-all duration-200 hover:scale-105 active:scale-95 w-full sm:w-auto justify-center"
+          aria-label="Appeler Med Ambulances maintenant au 03 89 50 60 69"
+        >
+          <svg class="w-7 h-7 flex-shrink-0 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          03.89.50.60.69
+        </a>
+        <p class="text-gray-500 text-sm font-medium text-center">
+          Un interlocuteur humain répond immédiatement
+        </p>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 text-sm">
+        <div class="flex items-center justify-center gap-2 text-gray-600">
+          <svg class="w-5 h-5 flex-shrink-0 text-orange-urgence" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <span>Plus de 15 ans d'expérience</span>
+        </div>
+        <div class="flex items-center justify-center gap-2 text-gray-600">
+          <svg class="w-5 h-5 flex-shrink-0 text-orange-urgence" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Transport remboursé Sécurité Sociale</span>
+        </div>
+        <div class="flex items-center justify-center gap-2 text-gray-600 text-center">
+          <svg class="w-5 h-5 flex-shrink-0 text-orange-urgence" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Spécialisé 68&nbsp;→ hôpitaux &amp; spécialistes Strasbourg</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
+      <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== REASSURANCE SECTION ===================== -->
+  <section id="promesse" class="py-16 px-4 bg-white" aria-labelledby="promesse-title">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 id="promesse-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-4">
+        Vous ne serez jamais laissés seuls
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+        Malade, loin de chez vous, stressé par un rendez-vous médical — nous sommes là, de A à Z, pour vous accompagner en toute sécurité et bienveillance.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <article class="card-promesse tilt-card relative p-8 rounded-2xl bg-blue-pale border border-blue-100 text-left">
+          <div class="tilt-shine"></div>
+          <div class="w-14 h-14 rounded-xl bg-blue-med flex items-center justify-center mb-5" aria-hidden="true">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-med mb-3">Un interlocuteur humain</h3>
+          <p class="text-gray-600 leading-relaxed">Quand vous appelez, c'est une vraie personne qui répond. Elle prend en charge toutes les informations et organise votre transport.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card-promesse tilt-card relative p-8 rounded-2xl bg-blue-pale border border-blue-100 text-left">
+          <div class="tilt-shine"></div>
+          <div class="w-14 h-14 rounded-xl bg-blue-med flex items-center justify-center mb-5" aria-hidden="true">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-med mb-3">15 ans d'expérience terrain</h3>
+          <p class="text-gray-600 leading-relaxed">Nous connaissons chaque hôpital, chaque service, chaque route. Votre sécurité et votre confort sont notre priorité absolue.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card-promesse tilt-card relative p-8 rounded-2xl bg-blue-pale border border-blue-100 text-left">
+          <div class="tilt-shine"></div>
+          <div class="w-14 h-14 rounded-xl bg-blue-med flex items-center justify-center mb-5" aria-hidden="true">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-med mb-3">Accompagnement de bout en bout</h3>
+          <p class="text-gray-600 leading-relaxed">De votre domicile jusqu'au service médical, et au retour. Nous attendons si nécessaire. Vous n'avez rien à gérer.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPLAINER — "Comment ça marche" ===================== -->
+  <section id="comment-ca-marche" class="py-16 px-4 bg-gray-light" aria-labelledby="comment-title">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-orange-urgence/10 text-orange-urgence font-semibold text-sm px-4 py-1.5 rounded-full mb-3">Simple et rapide</span>
+        <h2 id="comment-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-4">
+          Comment ça marche&nbsp;?
+        </h2>
+        <p class="text-lg text-gray-600 max-w-xl mx-auto">
+          Vous n'avez pas besoin de connaître les termes techniques. Expliquez-nous simplement où vous devez aller.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+
+        <div class="step-card tilt-card relative bg-white rounded-2xl p-7 shadow-sm border border-gray-200"><div class="tilt-shine"></div>
+          <div class="step-number">1</div>
+          <div class="w-12 h-12 rounded-full bg-blue-med/10 flex items-center justify-center mb-4 mx-auto" aria-hidden="true">
+            <svg class="w-6 h-6 text-blue-med" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-blue-med text-center mb-2">Vous appelez</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Un conseiller répond immédiatement. Dites-lui simplement où vous devez aller et quand.</p>
+        </div>
+
+        <div class="step-card tilt-card relative bg-white rounded-2xl p-7 shadow-sm border border-gray-200"><div class="tilt-shine"></div>
+          <div class="step-number">2</div>
+          <div class="w-12 h-12 rounded-full bg-blue-med/10 flex items-center justify-center mb-4 mx-auto" aria-hidden="true">
+            <svg class="w-6 h-6 text-blue-med" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-blue-med text-center mb-2">On organise tout</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Nous planifions le véhicule adapté, l'heure de départ et la prise en charge avec la Sécurité Sociale.</p>
+        </div>
+
+        <div class="step-card tilt-card relative bg-white rounded-2xl p-7 shadow-sm border border-gray-200"><div class="tilt-shine"></div>
+          <div class="step-number">3</div>
+          <div class="w-12 h-12 rounded-full bg-blue-med/10 flex items-center justify-center mb-4 mx-auto" aria-hidden="true">
+            <svg class="w-6 h-6 text-blue-med" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-blue-med text-center mb-2">Nous venons vous chercher</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Notre équipe arrive à votre domicile et vous accompagne jusqu'au service médical, et au retour.</p>
+        </div>
+
+      </div>
+
+      <!-- Inline CTA -->
+      <div class="text-center">
+        <a
+          href="tel:0389506069"
+          class="inline-flex w-full sm:w-auto justify-center items-center gap-3 bg-blue-med hover:bg-blue-700 text-white font-bold text-lg rounded-2xl px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+          aria-label="Appeler Med Ambulances au 03 89 50 60 69"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Appeler maintenant — 03.89.50.60.69
+        </a>
+        <p class="text-sm text-gray-500 mt-3">Appel gratuit depuis un téléphone fixe ou mobile</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="py-16 px-4 bg-white" aria-labelledby="services-title">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 id="services-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-4">
+          Nos véhicules de transport médical
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Ambulance, VSL, taxi médical… Vous n'avez pas à choisir. Nous sélectionnons le véhicule adapté à votre état de santé et à la prescription de votre médecin.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Ambulance -->
+        <article class="service-card tilt-card group bg-white rounded-2xl border-2 border-gray-100 hover:border-blue-med overflow-hidden shadow-sm">
+          <div class="service-img-placeholder service-img-ambulance h-56 relative overflow-hidden" aria-hidden="true">
+            <div class="service-img-overlay absolute inset-0 flex items-end p-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 bg-red-med/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                  Urgence &amp; Grande distance
+                </span>
+                <span class="inline-flex items-center gap-1.5 bg-blue-med/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Remboursé Sécu
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-blue-med mb-2">Ambulance</h3>
+            <p class="text-gray-600 leading-relaxed">Pour les transports nécessitant une surveillance médicale, les patients alités ou les longues distances. Véhicule équipé, équipe formée aux premiers secours.</p>
+          </div>
+        </article>
+
+        <!-- VSL -->
+        <article class="service-card tilt-card group bg-white rounded-2xl border-2 border-gray-100 hover:border-blue-med overflow-hidden shadow-sm">
+          <div class="service-img-placeholder service-img-vsl h-56 relative overflow-hidden" aria-hidden="true">
+            <div class="service-img-overlay absolute inset-0 flex items-end p-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 bg-blue-med/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Confort &amp; Mobilité réduite
+                </span>
+                <span class="inline-flex items-center gap-1.5 bg-blue-med/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Remboursé Sécu
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-blue-med mb-2">VSL — Véhicule Sanitaire Léger</h3>
+            <p class="text-gray-600 leading-relaxed">
+              <strong>C'est quoi un VSL&nbsp;?</strong> Un véhicule confortable pour transporter des patients qui peuvent s'asseoir. Pris en charge par la Sécurité Sociale sur prescription médicale.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Explication remboursement -->
+      <div class="mt-8 bg-blue-pale border border-blue-100 rounded-2xl p-6 flex gap-4 items-start">
+        <div class="w-10 h-10 rounded-full bg-blue-med flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-bold text-blue-med mb-1">Ambulance et VSL : tous deux remboursés par la Sécurité Sociale</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Que vous voyagiez en ambulance ou en VSL, votre transport peut être pris en charge à 65 % ou à 100 % (ALD, maternité…) sur prescription médicale. Nous vous guidons dans les démarches. <strong>Appelez-nous pour en savoir plus.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ZONE GÉOGRAPHIQUE ===================== -->
+  <section id="zone" class="py-20 px-4 bg-white" aria-labelledby="zone-title">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-14">
+        <h2 id="zone-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-3">
+          Notre zone d'intervention
+        </h2>
+        <p class="text-gray-500 text-lg max-w-lg mx-auto">
+          Basés à Pulversheim, nous intervenons dans tout le Haut-Rhin.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+
+        <!-- Colonne DÉPART -->
+        <div class="bg-blue-pale rounded-2xl p-7 border border-blue-100">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-blue-med flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-blue-med/60 uppercase tracking-widest">Vous habitez</p>
+              <p class="font-black text-blue-med text-lg">Haut-Rhin (68)</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Pulversheim</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Mulhouse</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Colmar</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Guebwiller</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Thann</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Ensisheim</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Wittenheim</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Ribeauvillé</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Saint-Louis</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Illzach</span>
+            <span class="bg-white text-blue-med text-sm font-medium border border-blue-100 rounded-lg px-3 py-1.5">Sausheim</span>
+            <span class="bg-blue-med text-white text-sm font-medium rounded-lg px-3 py-1.5">et partout dans le 68…</span>
+          </div>
+        </div>
+
+        <!-- Colonne ARRIVÉE -->
+        <div class="rounded-2xl p-7 border border-red-med/20" style="background:rgba(204,28,28,0.04)">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-red-med flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-red-med/60 uppercase tracking-widest">Nous vous emmenons</p>
+              <p class="font-black text-red-med text-lg">Strasbourg &amp; alentours</p>
+            </div>
+          </div>
+          <div class="space-y-2.5">
+            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
+              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
+              <div>
+                <p class="font-semibold text-gray-800 text-sm leading-tight">CHU Hautepierre</p>
+                <p class="text-gray-400 text-xs leading-tight">Oncologie · Neurologie · Chirurgie</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
+              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
+              <div>
+                <p class="font-semibold text-gray-800 text-sm leading-tight">Nouvel Hôpital Civil (NHC)</p>
+                <p class="text-gray-400 text-xs leading-tight">Cardiologie · Médecine interne</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
+              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
+              <div>
+                <p class="font-semibold text-gray-800 text-sm leading-tight">Clinique Rhena</p>
+                <p class="text-gray-400 text-xs leading-tight">Rhumatologie · Rééducation</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
+              <div class="w-1.5 h-1.5 rounded-full bg-red-med flex-shrink-0"></div>
+              <div>
+                <p class="font-semibold text-gray-800 text-sm leading-tight">Clinique Sainte-Anne</p>
+                <p class="text-gray-400 text-xs leading-tight">Ophtalmologie · Chirurgie ambulatoire</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-2.5 border border-red-med/10">
+              <div class="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0"></div>
+              <p class="text-gray-400 text-sm">Spécialistes · Cabinets médicaux · et plus</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== NAVETTE 68 → STRASBOURG ===================== -->
+  <section id="navette" class="py-20 px-4 bg-white" aria-labelledby="navette-title">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <span class="inline-block bg-blue-pale text-blue-med font-semibold text-sm px-4 py-1.5 rounded-full mb-5">Spécialité longue distance</span>
+
+      <h2 id="navette-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-4">
+        Vous habitez dans le 68&nbsp;?<br/>
+        Votre spécialiste est à Strasbourg&nbsp;?
+      </h2>
+
+      <p class="text-gray-500 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
+        Nous assurons la navette entre le Haut-Rhin et Strasbourg — de votre domicile jusqu'à l'hôpital ou au cabinet du spécialiste, aller et retour.
+      </p>
+
+      <!-- Trajet simplifié -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
+        <div class="bg-blue-pale border border-blue-100 rounded-2xl px-7 py-5 text-center">
+          <p class="text-blue-med/60 text-xs font-semibold uppercase tracking-widest mb-1">Départ</p>
+          <p class="text-blue-med font-black text-xl mb-1">Haut-Rhin (68)</p>
+          <p class="text-gray-400 text-sm">Mulhouse · Colmar · Guebwiller<br/>Thann · Ribeauvillé · Ensisheim…</p>
+        </div>
+
+        <div class="flex sm:flex-col items-center gap-1 px-2 text-gray-300">
+          <!-- Flèche bas sur mobile, droite sur desktop -->
+          <svg class="w-5 h-5 sm:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+          <svg class="w-5 h-5 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <span class="text-xs text-gray-400">aller-retour</span>
+          <svg class="w-5 h-5 sm:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 15l7-7 7 7"/></svg>
+          <svg class="w-5 h-5 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
+        </div>
+
+        <div class="bg-red-med/8 border border-red-med/20 rounded-2xl px-7 py-5 text-center" style="background:rgba(204,28,28,0.05)">
+          <p class="text-red-med/70 text-xs font-semibold uppercase tracking-widest mb-1">Arrivée</p>
+          <p class="text-red-med font-black text-xl mb-1">Strasbourg (67)</p>
+          <p class="text-gray-400 text-sm">CHU Hautepierre · NHC · Clinique Rhena<br/>Sainte-Anne · Spécialistes…</p>
+        </div>
+      </div>
+
+      <!-- 3 points en ligne légère -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+        <div class="flex gap-3 items-start">
+          <div class="w-9 h-9 rounded-xl bg-blue-pale flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-blue-med" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800 mb-0.5">Ponctualité garantie</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Nous calculons l'heure de départ pour que vous arriviez sereinement.</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-start">
+          <div class="w-9 h-9 rounded-xl bg-blue-pale flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-blue-med" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800 mb-0.5">Attente sur place</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Si la consultation dure plus longtemps, nous attendons. Vous n'êtes jamais seul.</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-start">
+          <div class="w-9 h-9 rounded-xl bg-blue-pale flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-blue-med" fill="currentColor" viewBox="0 0 24 24"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800 mb-0.5">Remboursement Sécu</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Avec prescription médicale, le trajet 68→67 est pris en charge. Nous gérons les formalités.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== AVIS CLIENTS ===================== -->
+  <section id="avis" class="py-16 px-4 bg-gray-light" aria-labelledby="avis-title">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 id="avis-title" class="text-3xl sm:text-4xl font-black text-blue-med mb-3">
+          Ce que disent nos patients
+        </h2>
+        <div class="flex items-center justify-center gap-2 mb-3">
+          <div class="flex gap-0.5" aria-label="Note moyenne 5 étoiles">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <span class="font-bold text-gray-800">5,0</span>
+          <span class="text-gray-400 text-sm">· 10 avis</span>
+        </div>
+        <p class="text-gray-500 text-base max-w-lg mx-auto">Des patients du Haut-Rhin qui ont fait confiance à Med Ambulances pour leurs trajets vers Strasbourg.</p>
+      </div>
+
+      <!-- Grille avis -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Avis 1 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-blue-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">MT</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Marie-Thérèse Schneider</p>
+              <p class="text-xs text-gray-400">Guebwiller · il y a 3 semaines</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"J'avais un rendez-vous en oncologie au CHU Hautepierre depuis Guebwiller. L'ambulancier est venu me chercher à 7h du matin, très ponctuel. Il a été d'un calme et d'une douceur exceptionnels tout au long du trajet. Je me suis sentie en sécurité. Merci du fond du cœur."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Guebwiller → CHU Hautepierre
+          </div>
+        </article>
+
+        <!-- Avis 2 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-red-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">KB</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Karim Benali</p>
+              <p class="text-xs text-gray-400">Mulhouse · il y a 1 mois</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"J'habite à Mulhouse et j'avais un suivi cardio au Nouvel Hôpital Civil à Strasbourg. Mohamed a attendu pendant toute ma consultation, puis m'a raccompagné. Il m'a parlé avec bienveillance, j'oubliais presque mon stress. Un grand professionnel, je recommande à 100 %."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Mulhouse → Nouvel Hôpital Civil
+          </div>
+        </article>
+
+        <!-- Avis 3 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-blue-light flex items-center justify-center text-white font-bold text-sm flex-shrink-0">KW</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Katarzyna Wierzbicka</p>
+              <p class="text-xs text-gray-400">Colmar · il y a 5 semaines</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Je vis à Colmar et je devais consulter un rhumatologue à la Clinique Rhena à Strasbourg. Je ne parle pas très bien français et j'avais peur de me perdre. Le chauffeur a tout géré, m'a aidée à l'accueil et attendu. Je ne me suis pas sentie seule une seule seconde. Merci infiniment."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Colmar → Clinique Rhena
+          </div>
+        </article>
+
+        <!-- Avis 4 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-blue-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">JP</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Jean-Pierre Kieffer</p>
+              <p class="text-xs text-gray-400">Ensisheim · il y a 2 mois</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Seul pour mon rendez-vous en neurologie à Strasbourg depuis Ensisheim. L'ambulancier est arrivé à l'heure, calme et rassurant. Exactement ce dont j'avais besoin."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Ensisheim → Neurologie CHU
+          </div>
+        </article>
+
+        <!-- Avis 5 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-red-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">FH</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Fatima Hamidi</p>
+              <p class="text-xs text-gray-400">Wittenheim · il y a 3 semaines</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Consultation ophtalmologie à Strasbourg depuis Wittenheim. Je redoutais le trajet, j'ai des problèmes de mobilité. L'ambulancier a été aux petits soins, m'a aidée à monter et descendre du véhicule sans que j'aie à demander. Un vrai réconfort dans un moment difficile. Je ferai appel à eux à chaque fois."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Wittenheim → Ophtalmologie Strasbourg
+          </div>
+        </article>
+
+        <!-- Avis 6 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-blue-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">RW</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Robert Wagner</p>
+              <p class="text-xs text-gray-400">Thann · il y a 6 semaines</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Intervention chirurgicale au NHC à Strasbourg, je venais de Thann. L'équipe est venue me chercher tôt le matin, et m'a récupéré après l'opération alors que j'étais encore sonné. Le professionnalisme et le sang-froid de mon ambulancier m'ont rassuré dans un moment vraiment délicat."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Thann → NHC Strasbourg
+          </div>
+        </article>
+
+        <!-- Avis 7 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-blue-light flex items-center justify-center text-white font-bold text-sm flex-shrink-0">ZK</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Zofia Kowalska</p>
+              <p class="text-xs text-gray-400">Ribeauvillé · il y a 2 mois</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Suivi en cancérologie à Hautepierre depuis Ribeauvillé, plusieurs fois par mois. Mohamed est devenu un visage familier et rassurant. Il sait quand parler et quand rester silencieux. Ce n'est pas juste un ambulancier, c'est quelqu'un qui vous accompagne vraiment. Merci pour tout."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Ribeauvillé → CHU Hautepierre
+          </div>
+        </article>
+
+        <!-- Avis 8 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-red-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">NB</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Nadia Benkaddour</p>
+              <p class="text-xs text-gray-400">Sausheim · il y a 1 mois</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Trajet Sausheim → Strasbourg impeccable. Ponctuel, discret, agréable. Rien à redire, je recommande."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Sausheim → Endocrinologie Strasbourg
+          </div>
+        </article>
+
+        <!-- Avis 9 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-blue-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">BO</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Bernard Obrecht</p>
+              <p class="text-xs text-gray-400">Pulversheim · il y a 7 semaines</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Opération à la Clinique Sainte-Anne à Strasbourg. L'ambulancier m'a pris en charge avant l'opération et est revenu me chercher après. Dans un état encore fragile, son calme et sa prévenance ont tout changé. Il conduit avec douceur, prend le temps. Un service vraiment humain."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Pulversheim → Clinique Sainte-Anne
+          </div>
+        </article>
+
+        <!-- Avis 10 -->
+        <article class="avis-card tilt-card relative bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="tilt-shine"></div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-red-med flex items-center justify-center text-white font-bold text-sm flex-shrink-0">LM</div>
+            <div>
+              <p class="font-bold text-gray-800 text-sm">Leila Mansouri</p>
+              <p class="text-xs text-gray-400">Illzach · il y a 3 semaines</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3" aria-label="5 étoiles">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">"Plusieurs transports depuis Illzach pour des séances de dialyse à Strasbourg. L'ambulancier est d'une régularité et d'une fiabilité à toute épreuve. Il arrive toujours à l'heure, aide à s'installer confortablement et crée une atmosphère apaisante. C'est un vrai professionnel de la santé, pas juste un chauffeur."</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-pale text-blue-med text-xs font-medium rounded-full px-3 py-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Illzach → Dialyse CHU Strasbourg
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section id="contact" class="py-20 px-4 bg-gradient-to-br from-blue-med to-blue-900 text-white text-center" aria-labelledby="contact-title">
+    <div class="max-w-2xl mx-auto">
+      <h2 id="contact-title" class="text-3xl sm:text-4xl font-black mb-4">
+        Prêt à organiser votre transport&nbsp;?
+      </h2>
+      <p class="text-blue-200 text-lg mb-4">
+        Un seul appel suffit. Notre équipe s'occupe de tout, même les démarches auprès de la Sécurité Sociale.
+      </p>
+      <p class="text-white font-bold text-xl mb-8">
+        Disponible 7j/7, 24h/24
+      </p>
+
+      <a
+        href="tel:0389506069"
+        class="group inline-flex w-full sm:w-auto justify-center items-center gap-3 sm:gap-4 bg-red-med hover:bg-red-600 text-white font-black text-xl sm:text-3xl rounded-2xl px-7 sm:px-10 py-5 sm:py-6 shadow-2xl hover:shadow-red-500/40 transition-all duration-200 hover:scale-105 active:scale-95"
+        aria-label="Appeler Med Ambulances au 03 89 50 60 69"
+      >
+        <svg class="w-8 h-8 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        03.89.50.60.69
+      </a>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-sm text-blue-200">
+        <div class="flex items-center gap-2 justify-center">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          Rue de Guebwiller, 68840 Pulversheim
+        </div>
+        <div class="flex items-center gap-2 justify-center">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          SIRET&nbsp;: 981 981 905 00020
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-900 text-gray-400 py-8 px-4 text-sm" role="contentinfo">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-center sm:text-left">
+        <p class="font-semibold text-white mb-1">Med Ambulances</p>
+        <p>Rue de Guebwiller — 68840 Pulversheim — Tél. 03.89.50.60.69</p>
+      </div>
+      <div class="flex gap-4 text-center">
+        <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200 underline underline-offset-2">Mentions légales</a>
+      </div>
+    </div>
+    <div class="max-w-5xl mx-auto mt-4 pt-4 border-t border-gray-800 text-center text-xs text-gray-600">
+      &copy; 2024 Med Ambulances — Transport médical dans le Haut-Rhin (68). Tous droits réservés.
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING CALL BUTTON ===================== -->
+  <a
+    href="tel:0389506069"
+    id="floatingBtn"
+    class="floating-call-btn fixed bottom-6 right-6 z-50 w-16 h-16 bg-red-med hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-110 active:scale-95"
+    aria-label="Appeler Med Ambulances maintenant — 03 89 50 60 69"
+    title="Appeler Med Ambulances — 03.89.50.60.69"
+  >
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+    <!-- Pulse ring -->
+    <span class="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-40 animate-ping" aria-hidden="true"></span>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

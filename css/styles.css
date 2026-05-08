@@ -1,0 +1,437 @@
+/* ================================================================
+   Med Ambulances — Custom Stylesheet
+   Design system : Bleu médical + Rouge urgence + Blanc
+   WCAG AA/AAA — Typographie large — Senior-friendly
+   ================================================================ */
+
+/* ---- Variables ---- */
+:root {
+  --blue-med:       #1B3B6F;
+  --blue-light:     #2D6FBF;
+  --blue-pale:      #EBF2FF;
+  --red-med:        #CC1C1C;
+  --red-hover:      #A81515;
+  --orange-urgence: #1B3B6F;
+  --white:          #FFFFFF;
+  --gray-light:     #F5F7FA;
+  --gray-border:    #E2E8F0;
+  --text-dark:      #1A202C;
+  --text-muted:     #718096;
+  --shadow-md:      0 4px 24px rgba(27, 59, 111, 0.12);
+  --shadow-lg:      0 8px 40px rgba(27, 59, 111, 0.18);
+  --shadow-teal:    0 12px 40px rgba(20, 123, 130, 0.18);
+}
+
+/* ---- Base ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px; /* Larger base for elderly users */
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible — accessibility */
+:focus-visible {
+  outline: 3px solid var(--orange-urgence);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--blue-med);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 9999;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ---- HEADER ---- */
+#site-header {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(27, 59, 111, 0.10);
+}
+
+#site-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 24px rgba(27, 59, 111, 0.15);
+}
+
+#site-header.scrolled .header-inner {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* ---- HERO SECTION ---- */
+.hero-section {
+  position: relative;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(235, 242, 255, 0.9) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(204, 28, 28, 0.05) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+/* ---- CTA PRIMARY BUTTON ---- */
+.cta-primary {
+  min-height: 68px;
+  letter-spacing: 0.01em;
+}
+
+/* ---- CARDS — 3D tilt via JS ---- */
+.card-promesse {
+  transition: transform 0.08s ease-out, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.card-promesse:hover {
+  box-shadow: var(--shadow-teal);
+}
+
+/* ---- STEP CARDS ---- */
+.step-card {
+  text-align: center;
+}
+
+.step-number {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background: var(--blue-med);
+  color: white;
+  font-weight: 900;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(27, 59, 111, 0.3);
+}
+
+/* ---- SERVICE CARDS ---- */
+.service-img-placeholder {
+  background: var(--gray-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-img-ambulance {
+  background: url('../assets/ambulance.jpg') center center / cover no-repeat;
+}
+
+.service-img-ambulance::before {
+  content: '';
+}
+
+.service-img-vsl {
+  background: url('../assets/vsl.jpg') center center / cover no-repeat;
+}
+
+.service-img-vsl::before {
+  content: '';
+}
+
+.service-img-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
+}
+
+/* ---- CAROUSEL ---- */
+.carousel-container {
+  position: relative;
+  user-select: none;
+}
+
+.carousel-track {
+  display: flex;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* Slide placeholder backgrounds */
+.slide-placeholder {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide-1 {
+  background: linear-gradient(135deg, #1B3B6F 0%, #CC1C1C 100%);
+  position: relative;
+}
+.slide-1::before { content: ''; }
+
+.slide-2 {
+  background: linear-gradient(135deg, #2D6FBF 0%, #1B3B6F 100%);
+  position: relative;
+}
+.slide-2::before { content: ''; }
+
+.slide-3 {
+  background: linear-gradient(135deg, #2D4A8F 0%, #3B82C4 100%);
+  position: relative;
+}
+.slide-3::before { content: ''; }
+
+.slide-4 {
+  background: linear-gradient(135deg, #1a2f5e 0%, #2D6FBF 100%);
+  position: relative;
+}
+.slide-4::before { content: ''; }
+
+.slide-5 {
+  background: linear-gradient(135deg, #CC1C1C 0%, #1B3B6F 100%);
+  position: relative;
+}
+.slide-5::before { content: ''; }
+
+.slide-caption {
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-btn {
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+}
+
+/* Carousel dots */
+#carouselDots .dot {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+#carouselDots .dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+#carouselDots .dot:not(.active) {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ---- STEP CARDS — 3D tilt ---- */
+.step-card {
+  transition: transform 0.08s ease-out, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.step-card:hover {
+  box-shadow: 0 16px 48px rgba(27, 59, 111, 0.16);
+}
+
+/* ---- SERVICE CARDS — 3D tilt ---- */
+.service-card {
+  transition: transform 0.08s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.service-card:hover {
+  box-shadow: 0 20px 56px rgba(27, 59, 111, 0.18);
+}
+
+/* ---- ZONE BADGES — 3D tilt ---- */
+.zone-badge {
+  cursor: default;
+  transition: transform 0.08s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.zone-badge:hover {
+  box-shadow: 0 12px 32px rgba(20, 123, 130, 0.14);
+}
+
+/* ---- 3D TILT — Shine overlay ---- */
+.tilt-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255,255,255,0.12) 0%,
+    transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+.tilt-active .tilt-shine {
+  opacity: 1;
+}
+
+/* ---- AVIS CARDS ---- */
+.avis-card {
+  transition: transform 0.08s ease-out, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.avis-card:hover {
+  box-shadow: 0 16px 48px rgba(27, 59, 111, 0.13);
+}
+
+/* ---- FLOATING CALL BUTTON ---- */
+.floating-call-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+/* Hide floating button when near footer */
+.floating-call-btn.hidden-float {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+
+/* ---- MENTIONS LÉGALES PAGE ---- */
+.mentions-content h2 {
+  color: var(--blue-med);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--blue-pale);
+}
+
+.mentions-content p,
+.mentions-content li {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.mentions-content a {
+  color: var(--blue-light);
+  text-decoration: underline;
+}
+
+/* ---- BADGE DISPONIBLE ---- */
+@keyframes badgePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(27, 59, 111, 0.25);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(27, 59, 111, 0);
+    transform: translateY(-2px);
+  }
+}
+
+.badge-disponible {
+  animation: badgePulse 2.8s ease-in-out infinite;
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Intersection observer triggered animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- RESPONSIVE OVERRIDES ---- */
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  .hero-section {
+    min-height: 100svh;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 15px;
+  }
+
+  .cta-primary {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ---- PRINT STYLES ---- */
+@media print {
+  .floating-call-btn,
+  #site-header,
+  .carousel-btn {
+    display: none !important;
+  }
+}
+
+/* ---- HIGH CONTRAST MODE ---- */
+@media (prefers-contrast: high) {
+  :root {
+    --blue-med: #00266E;
+    --red-med: #A80000;
+  }
+}
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
