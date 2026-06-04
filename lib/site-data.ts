@@ -102,8 +102,8 @@ export const siteData = {
     {
       name: "Sainte-Anne",
       specialties: "Exemple fréquent · consultations",
-      image: "/assets/hautepierre.jpg",
-      alt: "Etablissement hospitalier à Strasbourg"
+      image: "/assets/sainte-anne.jpeg",
+      alt: "Clinique Sainte-Anne à Strasbourg"
     }
   ],
   cities: [
