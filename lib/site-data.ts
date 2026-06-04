@@ -15,13 +15,27 @@ export const siteData = {
     "Med Ambulances"
   ],
   address: {
-    streetAddress: "",
-    postalCode: "",
-    addressLocality: "",
+    streetAddress: "Rue de Guebwiller",
+    postalCode: "68840",
+    addressLocality: "Pulversheim",
     addressRegion: "Haut-Rhin",
     addressCountry: "FR"
   },
-  siret: "",
+  legal: {
+    corporateName: "SINNE AMBULANCE",
+    brandName: "Med Ambulances",
+    siren: "981 981 905",
+    siret: "981 981 905 00020",
+    rcs: "981 981 905 R.C.S. Colmar",
+    vat: "FR49981981905",
+    legalForm: "SARL, société à responsabilité limitée",
+    shareCapital: "1 000,00 €",
+    apeCode: "86.90A",
+    apeLabel: "Ambulances",
+    publisher: "La gérance de SINNE AMBULANCE",
+    sourceUrl: "https://www.pappers.fr/entreprise/sinne-ambulance-981981905"
+  },
+  siret: "981 981 905 00020",
   geo: {
     latitude: "",
     longitude: ""
@@ -255,4 +269,4 @@ export const siteData = {
 } as const;
 
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.med-ambulances.fr";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://med-ambulances.vercel.app";
